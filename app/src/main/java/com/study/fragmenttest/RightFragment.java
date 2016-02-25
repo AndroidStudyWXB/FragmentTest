@@ -11,13 +11,17 @@ import android.view.ViewGroup;
  */
 public class RightFragment extends Fragment {
 
-    private final String name = "eeeee";
+    private String name;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.right_fragment, container, false);
+        MainActivity activity = (MainActivity) getActivity();
+        this.name = activity.getName();
+
         return view;
     }
+
 
     public String getName() {
         return name;

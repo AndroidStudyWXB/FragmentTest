@@ -16,6 +16,8 @@ import android.widget.Toast;
 // public class MainActivity extends ActionBarAcitvity implements OnClickListener
 public class MainActivity extends Activity implements OnClickListener {
 
+    private final String name = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +42,15 @@ public class MainActivity extends Activity implements OnClickListener {
 
             case R.id.button2:
                 RightFragment rightFragment = (RightFragment) getFragmentManager().findFragmentById(R.id.right_fragment);
-                Toast.makeText(MainActivity.this, "fuck", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, rightFragment.getName(), Toast.LENGTH_SHORT).show();
                 break;
 
             default:
                 break;
         }
+    }
+
+    public String getName() {
+        return name;
     }
 }
