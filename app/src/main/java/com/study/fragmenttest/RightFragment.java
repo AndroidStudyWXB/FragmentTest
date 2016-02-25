@@ -11,9 +11,15 @@ import android.view.ViewGroup;
  */
 public class RightFragment extends Fragment {
 
+    private final String name = "eeeee";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.right_fragment, container, false);
         return view;
+    }
+
+    public String getName() {
+        return name;
     }
 }
